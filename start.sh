@@ -1,12 +1,12 @@
 if [ -z $UPSTREAM_REPO ]
 then
   echo "Cloning main Repository"
-  git clone https://github.com/Botowner/Elsa-V3.git /Elsa-V3
+  git clone https://github.com/DKBOTx/TovinoBotV3.git /TovinoBotV3
 else
   echo "Cloning Custom Repo from $UPSTREAM_REPO "
-  git clone $UPSTREAM_REPO /Elsa-V3
+  git clone $UPSTREAM_REPO /TovinoBotV3
 fi
-cd /Elsa-V3
+cd /TovinoBotV3
 pip3 install -U -r requirements.txt
-echo "Starting Elsa-V3....🔥"
+echo "Starting 𝘋𝘒_𝘉𝘖𝘛𝘹...."
 python3 bot.py
