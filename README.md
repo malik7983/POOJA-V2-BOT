@@ -8,7 +8,7 @@
 <details><summary>Telegram</summary>
 <p>
 <br>
-<a href="https://t.me?template=https://t.me/cinemala_com"></a>
+<a href="https://t.me/cinemala_com">Telegram</a>
 </p>
 </details>
 
