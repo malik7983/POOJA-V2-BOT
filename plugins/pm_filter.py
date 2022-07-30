@@ -501,6 +501,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
      [
         InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about_menu'),
         InlineKeyboardButton('ᴄʟᴏsᴇ', callback_data='close')
+    ], [
+        InlineKeyboardButton('ℹ️ Help', callback_data='help')
     ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.delete()
