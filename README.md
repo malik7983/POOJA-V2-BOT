@@ -18,7 +18,7 @@
 <details><summary>Deploy To Heroku</summary>
 <p>
 <br>
-<a href="https://heroku.com/deploy?template=https://github.com/Botowner/Elsa-V3">
+<a href="https://telegram.org?template=https://github.com/Botowner/Elsa-V3">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 </a>
 </p>
