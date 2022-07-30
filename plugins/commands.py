@@ -29,6 +29,8 @@ async def start(client, message: pyrogram.types.Message):
       [
         InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about_menu'),
         InlineKeyboardButton('ᴄʟᴏsᴇ', callback_data='close')
+    ], [
+        InlineKeyboardButton('ℹ️ Help', callback_data='help')
     ]]
        
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -75,7 +77,9 @@ async def start(client, message: pyrogram.types.Message):
       [
         InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about_menu'),
         InlineKeyboardButton('ᴄʟᴏsᴇ', callback_data='close')
-    ]]
+   ], [
+       InlineKeyboardButton('ℹ️ Help', callback_data='help')
+   ]]
 
         reply_markup = InlineKeyboardMarkup(buttons)
 
@@ -125,8 +129,10 @@ async def start(client, message: pyrogram.types.Message):
       [
         InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about_menu'),
         InlineKeyboardButton('ᴄʟᴏsᴇ', callback_data='close')
+    ], [
+        InlineKeyboardButton('ℹ️ Help', callback_data='help')
     ]]
-        
+    
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
             photo=START_IMAGE_URL if START_IMAGE_URL else random.choice(PICS),
@@ -450,7 +456,7 @@ async def settings(client, message):
                     callback_data=f'setgs#redirect_to#{settings["redirect_to"]}#{grp_id}',
                 ),
                 InlineKeyboardButton(
-                    '👤 PM' if settings["redirect_to"] == "PM" else '📄 Chat',
+                    'PM' if settings["redirect_to"] == "PM" else 'Channel',
                     callback_data=f'setgs#redirect_to#{settings["redirect_to"]}#{grp_id}',
                 ),
             ],
@@ -460,7 +466,7 @@ async def settings(client, message):
                     callback_data=f'setgs#botpm#{settings["botpm"]}#{grp_id}',
                 ),
                 InlineKeyboardButton(
-                    '✅ Yes' if settings["botpm"] else '❌ No',
+                    '✅ Yes' if settings["botpm"] else '🗑️ No',
                     callback_data=f'setgs#botpm#{settings["botpm"]}#{grp_id}',
                 ),
             ],
@@ -470,7 +476,7 @@ async def settings(client, message):
                     callback_data=f'setgs#file_secure#{settings["file_secure"]}#{grp_id}',
                 ),
                 InlineKeyboardButton(
-                    '✅ Yes' if settings["file_secure"] else '❌ No',
+                    '✅ Yes' if settings["file_secure"] else '🗑️ No',
                     callback_data=f'setgs#file_secure#{settings["file_secure"]}#{grp_id}',
                 ),
             ],
@@ -480,7 +486,7 @@ async def settings(client, message):
                     callback_data=f'setgs#imdb#{settings["imdb"]}#{grp_id}',
                 ),
                 InlineKeyboardButton(
-                    '✅ Yes' if settings["imdb"] else '❌ No',
+                    '✅ Yes' if settings["imdb"] else '🗑️ No',
                     callback_data=f'setgs#imdb#{settings["imdb"]}#{grp_id}',
                 ),
             ],
@@ -490,7 +496,7 @@ async def settings(client, message):
                     callback_data=f'setgs#spell_check#{settings["spell_check"]}#{grp_id}',
                 ),
                 InlineKeyboardButton(
-                    '✅ Yes' if settings["spell_check"] else '❌ No',
+                    '✅ Yes' if settings["spell_check"] else '🗑️ No',
                     callback_data=f'setgs#spell_check#{settings["spell_check"]}#{grp_id}',
                 ),
             ],
@@ -500,7 +506,7 @@ async def settings(client, message):
                     callback_data=f'setgs#welcome#{settings["welcome"]}#{grp_id}',
                 ),
                 InlineKeyboardButton(
-                    '✅ Yes' if settings["welcome"] else '❌ No',
+                    '✅ Yes' if settings["welcome"] else '🗑️ No',
                     callback_data=f'setgs#welcome#{settings["welcome"]}#{grp_id}',
                 ),
             ],
