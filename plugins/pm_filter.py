@@ -530,19 +530,22 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('𝖥𝗂𝗅𝗍𝖾𝗋', callback_data='hud'),
             InlineKeyboardButton('𝖨𝗆𝖽𝖻', callback_data='imbd'),
-            InlineKeyboardButton('𝖢𝗈𝗇𝗇𝖾𝖼𝗍𝗂𝗈𝗇', callback_data='coct')
-            ],[
-            InlineKeyboardButton('𝖥𝗎𝗇', callback_data='fun'),
-            InlineKeyboardButton('𝖠𝖻𝗈𝗎𝗍', callback_data='about_menu'),
-            InlineKeyboardButton('𝖲𝗍𝖺𝗍𝗎𝗌', callback_data='stats')
-            ],[
-            InlineKeyboardButton('𝖡𝖺𝗇𝗌', callback_data='ban'),
-            InlineKeyboardButton('𝖢𝗈𝗏𝗂𝖽', callback_data='covid'),
-            InlineKeyboardButton('𝖯𝗂𝗇', callback_data='pin')
-            ],[
-            InlineKeyboardButton('𝖨𝗇𝖿𝗈', callback_data='info'),
+            InlineKeyboardButton('𝖢𝗈𝗇𝗇𝖾𝖼𝗍𝗂𝗈𝗇', callback_data='coct'),
+            InlineKeyboardButton('𝖥𝗎𝗇', callback_data='fun') 
+          ],[
+            InlineKeyboardButton('𝖢𝗈𝗏𝗂𝖽', callback_data='covid'),      
+            InlineKeyboardButton('𝖡𝖺𝗇𝗌', callback_data='ban'),        
+            InlineKeyboardButton('𝖯𝗂𝗇', callback_data='pin'),
+            InlineKeyboardButton('𝖨𝗇𝖿𝗈', callback_data='info')
+          ],[
+            InlineKeyboardButton('Song', callback_data='song'),
             InlineKeyboardButton('𝖩𝗌𝗈𝗇', callback_data='json'),
-            InlineKeyboardButton('𝖢𝖺𝗋𝖻𝗈𝗇', callback_data='carbon')
+            InlineKeyboardButton('𝖢𝖺𝗋𝖻𝗈𝗇', callback_data='carbon'),            
+            InlineKeyboardButton('𝖠𝖻𝗈𝗎𝗍', callback_data='about_menu')
+          ],[
+            InlineKeyboardButton('𝖲𝗍𝖺𝗍𝗎𝗌', callback_data='stats'),
+            InlineKeyboardButton('Source', callback_data='source')
+            InlineKeyboardButton('Back', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
