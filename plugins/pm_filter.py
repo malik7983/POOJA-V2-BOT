@@ -607,10 +607,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.delete()
-        await query.message.reply(
-                text=script.SOURCE_TXT,
-                reply_markup=reply_markup,
-                parse_mode='html'
+        await query.message.reply_photo(
+            photo=START_IMAGE_URL if START_IMAGE_URL else random.choice(PICS),
+            caption=script.SOURCE_TXT.format(temp.B_NAME),
+            reply_markup=reply_markup,
+            parse_mode='html'
             )
     elif query.data == "gtrans":
         buttons = [[
