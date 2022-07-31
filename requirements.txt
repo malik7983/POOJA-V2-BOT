@@ -16,6 +16,7 @@ youtube_search
 ytthumb
 ffmpeg-python
 ffmpeg
+ffmpeg-location
 ffprobe
 youtube-search-python==1.4.6
 googletrans==4.0.0-rc1
