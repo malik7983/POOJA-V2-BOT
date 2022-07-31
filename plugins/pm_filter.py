@@ -87,14 +87,15 @@ async def next_page(bot, query):
 
     btn.insert(0, 
         [
-            InlineKeyboardButton(f'♨️ {search} ♨️ ', 'dupe')
+            InlineKeyboardButton('♀️ {search} ♀️', 'dupe')
         ]
     )
     btn.insert(1,
         [ 
-            InlineKeyboardButton(f'ᴍᴏᴠɪᴇs', 'dupe'),
-            InlineKeyboardButton(f'sᴇʀɪᴇs', 'dupe'),
-            InlineKeyboardButton(f'ᴛɪᴘs', 'tips')
+             InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
+             InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
+             InlineKeyboardButton(f'sᴇʀɪᴇs', 'sinfo'),
+             InlineKeyboardButton(f'ᴛɪᴘs', 'tinfo')
         ]
     )
 
@@ -135,12 +136,12 @@ async def next_page(bot, query):
 async def advantage_spoll_choker(bot, query):
     _, user, movie_ = query.data.split('#')
     if int(user) != 0 and query.from_user.id != int(user):
-        return await query.answer("𝖲𝗐𝖺𝗇𝗍𝗁𝖺𝗆𝖺𝗒𝗂 𝖲𝖾𝖺𝗋𝖼𝗁 𝖢𝗁𝖾𝗒𝖺𝖽𝖺 𝖬𝗈𝗐𝗇𝖾", show_alert=True)
+        return await query.answer("Bro/Sis This Not For You. U want is file- Please Request", show_alert=True)
     if movie_ == "close_spellcheck":
         return await query.message.delete()
     movies = SPELL_CHECK.get(query.message.reply_to_message.message_id)
     if not movies:
-        return await query.answer("𝖱𝖾𝗊𝗎𝖾𝗌𝗍 𝖠𝗀𝖺𝗂𝗇 𝖣𝗎𝖽𝖾, 𝖥𝗂𝗅𝖾 𝖫𝗂𝗇𝗄 𝖾𝗑𝗉𝗂𝗋𝖾𝖽.", show_alert=True)
+        return await query.answer("Bro/Sis This Link Is Expired. Request Again Please.", show_alert=True)
     movie = movies[(int(movie_))]
     await query.answer('𝖭𝗃𝖺𝗇 𝖬𝗈𝗏𝗂𝖾 𝗈𝗇𝗇 𝖳𝗁𝖺𝗉𝗉𝖺𝗍𝖾 𝖻𝗋𝗈...')
     k = await manual_filters(bot, query.message, text=movie)
@@ -185,7 +186,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             title = query.message.chat.title
 
         else:
-            return await query.answer('𝗌𝖺𝗇𝗍𝗁𝗈𝗌𝗁𝖺𝗆 𝖺ayille')
+            return await query.answer('Are You Happy Now !')
 
         st = await client.get_chat_member(grp_id, userid)
         if (st.status == "creator") or (str(userid) in ADMINS):
@@ -431,7 +432,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             )
             msg1 = await query.message.reply(
                 f'<b> Hai 👋 {query.from_user.mention} </b>😍\n\n<b>📫 Your File is Ready</b>\n\n'           
-                f'<b>📂 Fɪʟᴇ Nᴀᴍᴇ</b> : <code>[Elsa] {title}</code>\n\n'              
+                f'<b>📂 Fɪʟᴇ Nᴀᴍᴇ</b> : <code>{title}</code>\n\n'              
                 f'<b>⚙️ Fɪʟᴇ Sɪᴢᴇ</b> : <b>{size}</b>',
                 True,
                 'html',
@@ -525,29 +526,23 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 ),
                 reply_markup=reply_markup
             )
-        await query.answer('Lᴏᴀᴅɪɴɢ..........')
+        await query.answer('Privacy Is Crime')
     elif query.data == "help":
         buttons = [[
             InlineKeyboardButton('𝖥𝗂𝗅𝗍𝖾𝗋', callback_data='hud'),
             InlineKeyboardButton('𝖨𝗆𝖽𝖻', callback_data='imbd'),
-            InlineKeyboardButton('𝖢𝗈𝗇𝗇𝖾𝖼𝗍𝗂𝗈𝗇', callback_data='coct')
+            InlineKeyboardButton('𝖢𝗈𝗇𝗇𝖾𝖼𝗍𝗂𝗈𝗇', callback_data='coct')     
           ],[
-            InlineKeyboardButton('𝖥𝗎𝗇', callback_data='fun'), 
-            InlineKeyboardButton('𝖢𝗈𝗏𝗂𝖽', callback_data='covid'),      
-            InlineKeyboardButton('𝖡𝖺𝗇𝗌', callback_data='ban')
-          ],[ 
-            InlineKeyboardButton('Song', callback_data='song'),
+            InlineKeyboardButton('𝖡𝖺𝗇𝗌', callback_data='ban'),
             InlineKeyboardButton('𝖯𝗂𝗇', callback_data='pin'),
             InlineKeyboardButton('𝖨𝗇𝖿𝗈', callback_data='info')
           ],[
             InlineKeyboardButton('TTS', callback_data='tts'),
             InlineKeyboardButton('𝖩𝗌𝗈𝗇', callback_data='json'),
-            InlineKeyboardButton('𝖢𝖺𝗋𝖻𝗈𝗇', callback_data='carbon')
-          ],[ 
-            InlineKeyboardButton('𝖠𝖻𝗈𝗎𝗍', callback_data='about_menu'),
-            InlineKeyboardButton('𝖲𝗍𝖺𝗍𝗎𝗌', callback_data='stats'),
             InlineKeyboardButton('Source', callback_data='source')
           ],[
+            InlineKeyboardButton('𝖲𝗍𝖺𝗍𝗎𝗌', callback_data='stats'),
+            InlineKeyboardButton('𝖠𝖻𝗈𝗎𝗍', callback_data='about_menu'),
             InlineKeyboardButton('Home', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -936,34 +931,34 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 [
                     InlineKeyboardButton( 'Redirect To',
                                          callback_data=f'setgs#redirect_to#{settings["redirect_to"]}#{grp_id}',),
-                    InlineKeyboardButton('👤 PM' if settings["redirect_to"] == "PM" else '📄 Chat',
+                    InlineKeyboardButton(' PM' if settings["redirect_to"] == "PM" else 'Channel',
                                          callback_data=f'setgs#redirect_to#{settings["redirect_to"]}#{grp_id}',),
                 ],
                 [
                     InlineKeyboardButton('Bot PM', callback_data=f'setgs#botpm#{settings["botpm"]}#{str(grp_id)}'),
-                    InlineKeyboardButton('✅ Yes' if settings["botpm"] else '❌ No',
+                    InlineKeyboardButton('✅ 𝐘𝐄𝐒' if settings["botpm"] else '🗑️ 𝐍𝐎',
                                          callback_data=f'setgs#botpm#{settings["botpm"]}#{str(grp_id)}')
                 ],
                 [
                     InlineKeyboardButton('File Secure',
                                          callback_data=f'setgs#file_secure#{settings["file_secure"]}#{str(grp_id)}'),
-                    InlineKeyboardButton('✅ Yes' if settings["file_secure"] else '❌ No',
+                    InlineKeyboardButton('✅ 𝐘𝐄𝐒' if settings["file_secure"] else '🗑️ 𝐍𝐎',
                                          callback_data=f'setgs#file_secure#{settings["file_secure"]}#{str(grp_id)}')
                 ],
                 [
                     InlineKeyboardButton('IMDB', callback_data=f'setgs#imdb#{settings["imdb"]}#{str(grp_id)}'),
-                    InlineKeyboardButton('✅ Yes' if settings["imdb"] else '❌ No',
+                    InlineKeyboardButton('✅ 𝐘𝐄𝐒' if settings["imdb"] else '🗑️ 𝐍𝐎',
                                          callback_data=f'setgs#imdb#{settings["imdb"]}#{str(grp_id)}')
                 ],
                 [
                     InlineKeyboardButton('Spell Check',
                                          callback_data=f'setgs#spell_check#{settings["spell_check"]}#{str(grp_id)}'),
-                    InlineKeyboardButton('✅ Yes' if settings["spell_check"] else '❌ No',
+                    InlineKeyboardButton('✅ 𝐘𝐄𝐒' if settings["spell_check"] else '🗑️ 𝐍𝐎',
                                          callback_data=f'setgs#spell_check#{settings["spell_check"]}#{str(grp_id)}')
                 ],
                 [
                     InlineKeyboardButton('Welcome', callback_data=f'setgs#welcome#{settings["welcome"]}#{str(grp_id)}'),
-                    InlineKeyboardButton('✅ Yes' if settings["welcome"] else '❌ No',
+                    InlineKeyboardButton('✅ 𝐘𝐄𝐒' if settings["welcome"] else '🗑️ 𝐍𝐎',
                                          callback_data=f'setgs#welcome#{settings["welcome"]}#{str(grp_id)}')
                 ]
             ]
@@ -971,9 +966,19 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.message.edit_reply_markup(reply_markup)
     elif query.data == "close":
         await query.message.delete()
-    elif query.data == 'tips':
-        await query.answer("sᴇɴᴅ ᴄᴏʀʀᴇᴄᴛ ᴍᴏᴠɪᴇ/sᴇʀɪᴇs ɴᴀᴍᴇ ғᴏʀ ʙᴇᴛᴛᴇʀ ʀᴇsᴜʟᴛs .\nᴛᴏ ɢᴇᴛ ʙᴇᴛᴛᴇʀ ʀᴇsᴜʟᴛ ғᴏʀ sᴇʀɪᴇs sᴇᴀʀᴄʜ ʟɪᴋᴇ ᴇxᴀᴍᴘʟᴇ ɢɪᴠᴇɴ, Eg - Peaky Blinders S01E01\n\n © 𝖥𝖨𝖫𝖤𝖲𝖤𝖠𝖱𝖢𝖧𝗑𝖡𝖮𝖳", True)
-    try: await query.answer('Your Results are there in Filter Button') 
+    elif query.data == "reqinfo":
+        await query.answer("⚠ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ⚠\n\nᴀꜰᴛᴇʀ 10 ᴍɪɴᴜᴛᴇꜱ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ\n\nɪꜰ ʏᴏᴜ ᴅᴏ ɴᴏᴛ ꜱᴇᴇ ᴛʜᴇ ʀᴇǫᴜᴇsᴛᴇᴅ ᴍᴏᴠɪᴇ / sᴇʀɪᴇs ꜰɪʟᴇ, ʟᴏᴏᴋ ᴀᴛ ᴛʜᴇ ɴᴇxᴛ ᴘᴀɢᴇ\n\n❣ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄɪɴᴇᴍᴀʟᴀ.ᴄᴏᴍ", show_alert=True)
+
+    elif query.data == "minfo":
+        await query.answer("⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯\nᴍᴏᴠɪᴇ ʀᴇǫᴜᴇꜱᴛ ꜰᴏʀᴍᴀᴛ\n⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯\n\nɢᴏ ᴛᴏ ɢᴏᴏɢʟᴇ ➠ ᴛʏᴘᴇ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ ➠ ᴄᴏᴘʏ ᴄᴏʀʀᴇᴄᴛ ɴᴀᴍᴇ ➠ ᴘᴀꜱᴛᴇ ᴛʜɪꜱ ɢʀᴏᴜᴘ\n\nᴇxᴀᴍᴘʟᴇ : ᴀᴠᴀᴛᴀʀ: ᴛʜᴇ ᴡᴀʏ ᴏғ ᴡᴀᴛᴇʀ\n\n🚯 ᴅᴏɴᴛ ᴜꜱᴇ ➠ ':(!,./)\n\n©️ ᴄɪɴᴇᴍᴀʟᴀ.ᴄᴏᴍ", show_alert=True)
+
+    elif query.data == "sinfo":
+        await query.answer("⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯\nꜱᴇʀɪᴇꜱ ʀᴇǫᴜᴇꜱᴛ ꜰᴏʀᴍᴀᴛ\n⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯\n\nɢᴏ ᴛᴏ ɢᴏᴏɢʟᴇ ➠ ᴛʏᴘᴇ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ ➠ ᴄᴏᴘʏ ᴄᴏʀʀᴇᴄᴛ ɴᴀᴍᴇ ➠ ᴘᴀꜱᴛᴇ ᴛʜɪꜱ ɢʀᴏᴜᴘ\n\nᴇxᴀᴍᴘʟᴇ : ᴍᴏɴᴇʏ ʜᴇɪsᴛ S01E01\n\n🚯 ᴅᴏɴᴛ ᴜꜱᴇ ➠ ':(!,./)\n\n©️ ᴄɪɴᴇᴍᴀʟᴀ.ᴄᴏᴍ", show_alert=True)      
+
+    elif query.data == "tinfo":
+        await query.answer("▣ ᴛɪᴘs ▣\n\n★ ᴛʏᴘᴇ ᴄᴏʀʀᴇᴄᴛ sᴘᴇʟʟɪɴɢ (ɢᴏᴏɢʟᴇ)\n\n★ ɪғ ʏᴏᴜ ɴᴏᴛ ɢᴇᴛ ʏᴏᴜʀ ғɪʟᴇ ɪɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ᴛʜᴇɴ ᴛʜᴇ ɴᴇxᴛ sᴛᴇᴘ ɪs ᴄʟɪᴄᴋ ɴᴇxᴛ ʙᴜᴛᴛᴏɴ.\n\n★ ᴄᴏɴᴛɪɴᴜᴇ ᴛʜɪs ᴍᴇᴛʜᴏᴅ ᴛᴏ ɢᴇᴛᴛɪɴɢ ʏᴏᴜ ғɪʟᴇ\n\n❣ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄɪɴᴇᴍᴀʟᴀ. ᴄᴏᴍ", show_alert=True)
+    
+    try: await query.answer('Information Showing...') 
     except: pass
 
 
@@ -1029,14 +1034,15 @@ async def auto_filter(client, msg: pyrogram.types.Message, spoll=False):
 
     btn.insert(0, 
         [
-            InlineKeyboardButton(f'♨️ {search} ♨️ ', 'dupe')
+            InlineKeyboardButton(f'♀️ {search} ♀️ ', 'dupe')
         ]
     )
     btn.insert(1,
         [
-            InlineKeyboardButton(f'ᴍᴏᴠɪᴇs', 'dupe'),
-            InlineKeyboardButton(f'sᴇʀɪᴇs', 'dupe'),
-            InlineKeyboardButton(f'ᴛɪᴘs', 'tips')
+             InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
+             InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
+             InlineKeyboardButton(f'sᴇʀɪᴇs', 'sinfo'),
+             InlineKeyboardButton(f'ᴛɪᴘs', 'tinfo')
         ]
     )
 
