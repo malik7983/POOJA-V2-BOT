@@ -15,6 +15,9 @@ youtube_search_python
 youtube_search
 ytthumb
 ffmpeg-python
+ffmpeg
+ffprobe
+youtube-search-python==1.4.6
 googletrans==4.0.0-rc1
 carbonnow==0.0.1
 Pillow>=4.2.0
