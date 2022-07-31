@@ -43,7 +43,12 @@ Devs:
 Simple Telegram Text-To-Speech Module.
 It can use the following as speech synthesis engines:
 
-Amazon's Polly engine
+/tts
+Reply with you text 
+
+Eg: Hello
+Reply /tts
+
 Google's TTS engine by way of the gTTS library
 """
     COVID_TXT = """<b><u>𝖢𝗈𝗏𝗂𝖽 19 𝗂𝗇𝖿𝗈𝗋𝗆𝖺𝗍𝗂𝗈𝗇</u><b/>
