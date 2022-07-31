@@ -10,6 +10,7 @@ imdbpy==2021.4.18
 aiofiles
 telegraph
 pyrogram
+youtube-dl
 youtube_search_python
 youtube_search
 ytthumb
