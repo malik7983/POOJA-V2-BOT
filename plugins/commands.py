@@ -452,26 +452,26 @@ async def settings(client, message):
         buttons = [
             [
                 InlineKeyboardButton(
-                    'Filter Button',
+                    '𝐅𝐈𝐋𝐓𝐄𝐑 𝐁𝐔𝐓𝐓𝐎𝐍',
                     callback_data=f'setgs#button#{settings["button"]}#{grp_id}',
                 ),
                 InlineKeyboardButton(
-                    'Single' if settings["button"] else 'Double',
+                    '𝐒𝐈𝐍𝐆𝐋𝐄' if settings["button"] else '𝐃𝐎𝐔𝐁𝐋𝐄',
                     callback_data=f'setgs#button#{settings["button"]}#{grp_id}',
                 ),
             ],[
                 InlineKeyboardButton(
-                    'Redirect To',
+                    '𝐑𝐄𝐃𝐈𝐑𝐄𝐂𝐓 𝐓𝐎',
                     callback_data=f'setgs#redirect_to#{settings["redirect_to"]}#{grp_id}',
                 ),
                 InlineKeyboardButton(
-                    'PM' if settings["redirect_to"] == "PM" else 'Channel',
+                    '𝐏𝐌' if settings["redirect_to"] == "PM" else '𝐂𝐇𝐀𝐍𝐍𝐄𝐋',
                     callback_data=f'setgs#redirect_to#{settings["redirect_to"]}#{grp_id}',
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    'Bot PM',
+                    '𝐁𝐎𝐓 𝐏𝐌',
                     callback_data=f'setgs#botpm#{settings["botpm"]}#{grp_id}',
                 ),
                 InlineKeyboardButton(
@@ -481,7 +481,7 @@ async def settings(client, message):
             ],
             [
                 InlineKeyboardButton(
-                    'File Secure',
+                    '𝐅𝐈𝐋𝐄 𝐒𝐄𝐂𝐔𝐑𝐄',
                     callback_data=f'setgs#file_secure#{settings["file_secure"]}#{grp_id}',
                 ),
                 InlineKeyboardButton(
@@ -491,7 +491,7 @@ async def settings(client, message):
             ],
             [
                 InlineKeyboardButton(
-                    'IMDB',
+                    '𝐈𝐌𝐃𝐁',
                     callback_data=f'setgs#imdb#{settings["imdb"]}#{grp_id}',
                 ),
                 InlineKeyboardButton(
@@ -501,7 +501,7 @@ async def settings(client, message):
             ],
             [
                 InlineKeyboardButton(
-                    'Spell Check',
+                    '𝐒𝐏𝐄𝐋𝐋 𝐂𝐇𝐄𝐂𝐊',
                     callback_data=f'setgs#spell_check#{settings["spell_check"]}#{grp_id}',
                 ),
                 InlineKeyboardButton(
@@ -511,7 +511,7 @@ async def settings(client, message):
             ],
             [
                 InlineKeyboardButton(
-                    'Welcome',
+                    '𝐖𝐄𝐋𝐂𝐎𝐌𝐄',
                     callback_data=f'setgs#welcome#{settings["welcome"]}#{grp_id}',
                 ),
                 InlineKeyboardButton(
