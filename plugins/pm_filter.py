@@ -527,8 +527,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     temp.U_NAME, 
                     temp.B_NAME,
                 ),
-                reply_markup=reply_markup
-                parse_mode=enums.ParseMode.HTML
+                reply_markup=reply_markup,
             )
         await query.answer('Privacy Is Crime')
     elif query.data == "help":
