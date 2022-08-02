@@ -259,6 +259,7 @@ async def delallconfirm(client, message):
     else:
         return
 
+
     st = await client.get_chat_member(grp_id, userid)
     if (st.status == enums.ChatMemberStatus.OWNER) or (str(userid) in ADMINS):
         await message.reply_text(
