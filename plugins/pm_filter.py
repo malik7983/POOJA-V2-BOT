@@ -548,6 +548,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('𝙰𝙱𝙾𝚄𝚃', callback_data='about_menu'),
             InlineKeyboardButton('𝙷𝙾𝙼𝙴', callback_data='start')
         ]]
+         reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text="▣ ▢ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▣"
+        )
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.HELP_TXT.format(query.from_user.mention),
@@ -569,6 +579,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     ]
                 ]
             )
+        )
+    reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text="▣ ▢ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▣"
         )
     elif query.data == "about_menu":
         buttons = [[
