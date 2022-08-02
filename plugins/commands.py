@@ -99,7 +99,6 @@ async def start(client, message: pyrogram.types.Message):
                 temp.B_NAME,
             ),
             reply_markup=reply_markup
-            parse_mode=enums.ParseMode.HTML
         )
         return
 
