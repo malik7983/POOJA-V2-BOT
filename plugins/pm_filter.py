@@ -537,7 +537,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('𝙲𝙾𝙽𝙽𝙴𝙲𝚃𝙸𝙾𝙽', callback_data='coct')     
           ],[
             InlineKeyboardButton('𝙱𝙰𝙽𝚂', callback_data='ban'),
-            InlineKeyboardButton('𝙿𝙸𝙽', callback_data='pin'),
+            InlineKeyboardButton('𝚂𝙾𝙽𝙶', callback_data='song'),
             InlineKeyboardButton('𝙸𝙽𝙵𝙾', callback_data='info')
           ],[
             InlineKeyboardButton('𝚃𝚃𝚂', callback_data='tts'),
