@@ -605,7 +605,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.message.edit_text(
             text=script.SHORT_TXT,
             reply_markup=reply_markup,
-            parse_modeenums.ParseMode.HTML
+            parse_mode=enums.ParseMode.HTML
         )
     elif query.data == "tts":
         buttons = [[
