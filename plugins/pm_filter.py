@@ -435,7 +435,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f'<b>📂 Fɪʟᴇ Nᴀᴍᴇ</b> : <code>{title}</code>\n\n'              
                 f'<b>⚙️ Fɪʟᴇ Sɪᴢᴇ</b> : <b>{size}</b>',
                 True,
-                'html',
+                enums.ParseMode.HTML,
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
