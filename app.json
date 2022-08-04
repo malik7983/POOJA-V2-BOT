@@ -81,7 +81,7 @@
         },
         "UNAUTHORIZED_CALLBACK_TEXT":{
             "description": "Text to show when unauthorized user tries to use bot. Defaults to 'oKda' (200 Char Limit).",
-            "value": "𝙏𝙃𝙄𝙎 𝙄𝙎 𝙉𝙊𝙏 𝙂𝙐𝘿 𝘿𝙐𝘿𝙀",
+            "value": "𝑯𝒆𝒚 𝒃𝒓𝒐 𝒕𝒉𝒊𝒔 𝒊𝒔 𝒏𝒐𝒕 𝒇𝒂𝒊𝒓",
             "required": false
         },
         "REDIRECT_TO":{
