@@ -125,8 +125,8 @@ async def get_filter_results(query):
 async def get_file_details(query):
     filter = {'file_id': query}
     cursor = Media.find(filter)
-    file_details_pr0fess0r99 = await cursor.to_list(length=1)
-    return file_details_pr0fess0r99
+    filedetails = await cursor.to_list(length=1)
+    return filedetails
 
 def encode_file_id(s: bytes) -> str:
     r = b""
