@@ -7,9 +7,11 @@ from pymongo.errors import DuplicateKeyError
 from umongo import Instance, Document, fields
 from motor.motor_asyncio import AsyncIOMotorClient
 from marshmallow.exceptions import ValidationError
-from info import DATABASE_URI, DATABASE_NAME, COLLECTION_NAME, USE_CAPTION_FILTER, temp
+from info import DATABASE_URI, DATABASE_NAME, COLLECTION_NAME, USE_CAPTION_FILTER
+
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
+
 
 client = AsyncIOMotorClient(DATABASE_URI)
 db = client[DATABASE_NAME]
@@ -27,7 +29,7 @@ class Media(Document):
 
     class Meta:
         indexes = ('$file_name', )
-        collection_name = "Telegram_files"
+        collection_name = COLLECTION_NAME
 
 
 async def save_file(media):
@@ -63,23 +65,28 @@ async def save_file(media):
             return True, 1
 
 
-async def get_search_results(query, file_type=None, max_results=temp.filterBtns, offset=0):
+
+async def get_search_results(query, file_type=None, max_results=10, offset=0, filter=False):
     """For given query return (results, next_offset)"""
 
     query = query.strip()
+    #if filter:
+        #better ?
+        #query = query.replace(' ', r'(\s|\.|\+|\-|_)')
+        #raw_pattern = r'(\s|_|\-|\.|\+)' + query + r'(\s|_|\-|\.|\+)'
     if not query:
         raw_pattern = '.'
     elif ' ' not in query:
         raw_pattern = r'(\b|[\.\+\-_])' + query + r'(\b|[\.\+\-_])'
     else:
         raw_pattern = query.replace(' ', r'.*[\s\.\+\-_]')
-
+    
     try:
         regex = re.compile(raw_pattern, flags=re.IGNORECASE)
     except:
         return []
 
-    if False:
+    if USE_CAPTION_FILTER:
         filter = {'$or': [{'file_name': regex}, {'caption': regex}]}
     else:
         filter = {'file_name': regex}
@@ -104,30 +111,13 @@ async def get_search_results(query, file_type=None, max_results=temp.filterBtns,
     return files, next_offset, total_results
 
 
-async def get_filter_results(query):
-    query = query.strip()
-    if not query:
-        raw_pattern = '.'
-    elif ' ' not in query:
-        raw_pattern = r'(\b|[\.\+\-_])' + query + r'(\b|[\.\+\-_])'
-    else:
-        raw_pattern = query.replace(' ', r'.*[\s\.\+\-_]')
-    try:
-        regex = re.compile(raw_pattern, flags=re.IGNORECASE)
-    except:
-        return []
-    filter = {'file_name': regex}
-    total_results = await Media.count_documents(filter)
-    cursor = Media.find(filter)
-    cursor.sort('$natural', -1)
-    files = await cursor.to_list(length=int(total_results))
-    return files
 
 async def get_file_details(query):
     filter = {'file_id': query}
     cursor = Media.find(filter)
-    file_details_pr0fess0r99 = await cursor.to_list(length=1)
-    return file_details_pr0fess0r99
+    filedetails = await cursor.to_list(length=1)
+    return filedetails
+
 
 def encode_file_id(s: bytes) -> str:
     r = b""
