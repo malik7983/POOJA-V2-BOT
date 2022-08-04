@@ -34,6 +34,7 @@
 - [x] Stats, Users, Chats
 - [x] Spelling Check Feature
 - [x] File Store
+- [x] 📂 PM & Channel 
 
 ## Variables
 
