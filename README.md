@@ -1,6 +1,9 @@
 # Elsa-V3
 @ccomautofilter_bot
 <br>
+## Features
+
+★ 2GB+ Size File Added
 
 
 ## Telegram
