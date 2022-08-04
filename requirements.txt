@@ -23,6 +23,7 @@ speedtest-cli
 python-telegram-bot==11.1.0
 pyromod~=1.5
 gtts
+googletrans==4.0.0-rc1
 yt_dlp
 wget
 Heroku3
