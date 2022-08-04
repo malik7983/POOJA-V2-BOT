@@ -15,6 +15,10 @@
 [![Open Source happy ](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/Botowner/Elsa-V3)   
 [![Contributors](https://img.shields.io/github/contributors/Botowner/Elsa-V3?style=flat-square&color=green)](https://github.com/Botowner/Elsa-V3/graphs/contributors)
 
+## New_feature
+
+- [x] 2GB+File Support
+
 ## Features
 
 - [x] Auto Filter
@@ -27,7 +31,7 @@
 - [x] Inline Search
 - [x] Random pics
 - [x] ids and User info 
-- [x] Stats, Users, Chats, Ban, Unban, Leave, Disable, Channel
+- [x] Stats, Users, Chats
 - [x] Spelling Check Feature
 - [x] File Store
 
