@@ -433,7 +433,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             msg1 = await query.message.reply(
                 f'<b> Hai 👋 {query.from_user.mention} </b>😍\n\n<b>📫 Your File is Ready</b>\n\n'           
                 f'<b>📂 Fɪʟᴇ Nᴀᴍᴇ</b> : <code>{title}</code>\n\n'              
-                f'<b>⚙️ Fɪʟᴇ Sɪᴢᴇ</b> : <b>{file_size}</b>',
+                f'<b>⚙️ Fɪʟᴇ Sɪᴢᴇ</b> : <b>{size}</b>',
                 True,
                 enums.ParseMode.HTML,
                 reply_markup=InlineKeyboardMarkup(
