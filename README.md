@@ -1,19 +1,9 @@
-# Elsa-V3
-@ccomautofilter_bot
-<br>
-## New Features
-
-★ 2GB+ Size File Added
-
-
-## Telegram
-
-<details><summary>Telegram</summary>
-<p>
-<br>
-<a href="https://t.me/cinemala_com">Telegram</a>
+<p align="center">
+  <img src="assets/Elsa.png" alt="Elsa-V3">
 </p>
-</details>
+<h1 align="center">
+  <b>Elsa-V3</b>
+</h1>
 
 
 ## Deploy
