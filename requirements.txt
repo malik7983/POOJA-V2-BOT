@@ -1,5 +1,4 @@
-# Pyrogram ഇതിന് പകരം താഴെ ഉള്ള ലിങ്ക് മതി 🙃
-https://github.com/subinps/pyrogram/archive/master.zip
+Pyrogram 
 tgcrypto
 pymongo[srv]==3.12.3
 motor==2.5.1
