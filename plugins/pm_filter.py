@@ -78,7 +78,7 @@ async def next_page(bot, query):
                 InlineKeyboardButton(
                     text=f"▣ {get_size(file.file_size)} ➣",
                     callback_data=f'{pre}_#{file.file_id}#{query.from_user.id}',
-                )
+                ),
                 InlineKeyboardButton(
                     text=f"{file.file_name}", callback_data=f'{pre}#{file.file_id}#{query.from_user.id}'
                 )
