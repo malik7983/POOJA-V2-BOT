@@ -15,7 +15,7 @@ OWLY_API = os.environ.get("OWLY_API", None)
 BUTTONS = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton(text='ᴄɪɴᴇᴍᴀʟᴀ.ᴄᴏᴍ', url='https://t.me/cinemala_com1')
+            InlineKeyboardButton(text='𝐌𝐎𝐕𝐈𝐄𝐒𝐇𝐔𝐁', url='https://t.me/MOVIESHUB_GRUP')
         ]
     ]
 )
