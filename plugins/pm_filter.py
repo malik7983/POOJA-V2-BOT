@@ -28,7 +28,7 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.ERROR)
 
 BUTTONS = {}
-SPELL_CHECK = {}
+SPELL_CHECK = {} 
 
 
 @Client.on_message((filters.group | filters.private) & filters.text & filters.incoming)
@@ -961,12 +961,12 @@ async def auto_filter(client, msg: pyrogram.types.Message, spoll=False):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"{file.file_name}",
-                    callback_data=f'{pre}#{file.file_id}#{msg.from_user.id if msg.from_user is not None else 0}',
+                    text=f"▣ {get_size(file.file_size)} ➣",
+                    callback_data=f'{pre}_#{file.file_id}#{msg.from_user.id if msg.from_user is not None else 0}',
                 ),
                 InlineKeyboardButton(
-                    text=f"{get_size(file.file_size)}",
-                    callback_data=f'{pre}_#{file.file_id}#{msg.from_user.id if msg.from_user is not None else 0}',
+                    text=f"{file.file_name}",
+                    callback_data=f'{pre}#{file.file_id}#{msg.from_user.id if msg.from_user is not None else 0}',
                 )
             ]
             for file in files
