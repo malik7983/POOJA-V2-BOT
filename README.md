@@ -1,19 +1,12 @@
 <p align="center">
-  <img src="assets/Elsa.png" alt="Elsa-V3">
+  <img src="assets/Pooja.jpg" alt="Pooja">
 </p>
 <h1 align="center">
-  <b>Elsa-V3</b>
+  <b>Pooja</b>
 </h1>
 
-<a href="https://t.me/cinemala_com1">
+<a href="https://t.me/MOVIESHUB_WA">
   <img src="https://img.shields.io/badge/Join-blue?logo=telegram" width="70">
-
-
-[![Stars](https://img.shields.io/github/stars/Botowner/Elsa-V3?style=flat-square&color=green)](https://github.com/Botowner/Elsa-V3/stargazers)
-[![Forks](https://img.shields.io/github/forks/Botowner/Elsa-V3?style=flat-square&color=blue)](https://github.com/Botowner/Elsa-V3/fork)
-[![Size](https://img.shields.io/github/repo-size/Botowner/Elsa-V3?style=flat-square&color=red)](https://github.com/Botowner/Elsa-V3)   
-[![Open Source happy ](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/Botowner/Elsa-V3)   
-[![Contributors](https://img.shields.io/github/contributors/Botowner/Elsa-V3?style=flat-square&color=green)](https://github.com/Botowner/Elsa-V3/graphs/contributors)
 
 ## New_feature
 
@@ -59,14 +52,14 @@ You can deploy this bot anywhere.
 <summary>Deploy To Heroku</summary>
 <br>
 <p>
-<a href="https://heroku.com/deploy?template=https://github.com/Botowner/Elsa-V3">
+<a href="https://heroku.com/deploy?template=https://github.com/BC-Maniac/POOJA-V2-BOT">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 </a>
 </p>
 <details><summary>Deploy To VPS</summary>
 <p>
 <pre>
-git clone https://github.com/Botowner/Elsa-V3
+git clone https://github.com/BC-Maniac/POOJA-V2-BOT
 # Install Packages
 pip3 install -U -r requirements.txt
 Edit info.py with variables as given below then run bot
@@ -92,4 +85,3 @@ python3 bot.py
 * /users - to get list of my users and ids.
 * /chats - to get list of the my chats and ids* /broadcast - to broadcast a message to all DᵤₗQᵤₑᵣ₂.ₒ users
 ```
-<b>CREATOR » [Aswin](https://t.me/Aswin_pm_Bot)</b>
