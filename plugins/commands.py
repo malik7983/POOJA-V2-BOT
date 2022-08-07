@@ -25,15 +25,15 @@ async def start(client, message: pyrogram.types.Message):
 
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [[
-        InlineKeyboardButton('× ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ×', url=f'http://t.me/{temp.U_NAME}?startgroup=true') ] ,
+        InlineKeyboardButton('❄️ 𝙹𝙾𝙸𝙽 𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ❄️', url=f'https://t.me/+MNczoLfGDYM1ZmEx') ] ,
        [
-        InlineKeyboardButton(' ɢʀᴏᴜᴩ ', url='https://t.me/cinemala_com'),
-        InlineKeyboardButton(' ᴄʜᴀɴɴᴇʟ ', url='https://t.me/cinemala_com1')
+        InlineKeyboardButton('🎬 𝙼𝙾𝚅𝙸𝙴 𝚄𝙿𝙳𝙰𝚃𝙴𝚂', url='https://t.me/MOVIESHUB_WA'),
+        InlineKeyboardButton('🤖 𝙱𝙾𝚃 𝚄𝙿𝙳𝙰𝚃𝙴𝚂', url='https://t.me/TG_BOTS_HUB')
      ],[
-        InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),
-        InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about_menu')
+        InlineKeyboardButton('ℹ️ 𝙷𝙴𝙻𝙿', callback_data='help'),
+        InlineKeyboardButton('😊 𝙰𝙱𝙾𝚄𝚃', callback_data='about')
      ],[
-        InlineKeyboardButton('ᴄʟᴏsᴇ', callback_data='close')    
+        InlineKeyboardButton('𝙲𝙻𝙾𝚂𝙴', callback_data='close')    
     ]]
        
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -76,15 +76,15 @@ async def start(client, message: pyrogram.types.Message):
     if len(message.command) != 2:
 
         buttons = [[
-        InlineKeyboardButton('× ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ×', url=f'http://t.me/{temp.U_NAME}?startgroup=true') ] ,
+        InlineKeyboardButton('❄️ 𝙹𝙾𝙸𝙽 𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ❄️', url=f'https://t.me/+MNczoLfGDYM1ZmEx') ] ,
        [
-        InlineKeyboardButton(' ɢʀᴏᴜᴩ ', url='https://t.me/cinemala_com'),
-        InlineKeyboardButton(' ᴄʜᴀɴɴᴇʟ ', url='https://t.me/cinemala_com1')
+        InlineKeyboardButton('🎬 𝙼𝙾𝚅𝙸𝙴 𝚄𝙿𝙳𝙰𝚃𝙴𝚂', url='https://t.me/MOVIESHUB_WA'),
+        InlineKeyboardButton('🤖 𝙱𝙾𝚃 𝚄𝙿𝙳𝙰𝚃𝙴𝚂', url='https://t.me/TG_BOTS_HUB')
      ],[
-        InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),
-        InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about_menu')
+        InlineKeyboardButton('ℹ️ 𝙷𝙴𝙻𝙿', callback_data='help'),
+        InlineKeyboardButton('😊 𝙰𝙱𝙾𝚄𝚃', callback_data='about')
      ],[
-        InlineKeyboardButton('ᴄʟᴏsᴇ', callback_data='close')    
+        InlineKeyboardButton('𝙲𝙻𝙾𝚂𝙴', callback_data='close')    
     ]]
 
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -111,7 +111,7 @@ async def start(client, message: pyrogram.types.Message):
         btn = [
             [
                 InlineKeyboardButton(
-                    "🤖 Join Updates Channel", url=invite_link.invite_link
+                    "🎬 𝙹𝙾𝙸𝙽 𝙾𝚄𝚁 𝙼𝙾𝚅𝙸𝙴 𝙲𝙷𝙰𝙽𝙽𝙴𝙻", url=invite_link.invite_link
                 )
             ]
         ]
@@ -122,7 +122,7 @@ async def start(client, message: pyrogram.types.Message):
             btn.append([InlineKeyboardButton(" 🔄 Try Again", callback_data=f"{pre}#{file_id}")])
         await client.send_message(
             chat_id=message.from_user.id,
-            text="**Please Join My Updates Channel to use this Bot!**",
+            text="**Hᴇʏ {mention}👋\n\n   Pʟᴇᴀsᴇ ɪᴏɪɴ ᴍʏ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴜsᴇ ᴍᴇ❗**",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode=enums.ParseMode.MARKDOWN
             )
@@ -131,15 +131,15 @@ async def start(client, message: pyrogram.types.Message):
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
 
         buttons = [[
-        InlineKeyboardButton('× ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ×', url=f'http://t.me/{temp.U_NAME}?startgroup=true') ] ,
+        InlineKeyboardButton('❄️ 𝙹𝙾𝙸𝙽 𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ❄️', url=f'https://t.me/+MNczoLfGDYM1ZmEx') ] ,
        [
-        InlineKeyboardButton(' ɢʀᴏᴜᴩ ', url='https://t.me/cinemala_com'),
-        InlineKeyboardButton(' ᴄʜᴀɴɴᴇʟ ', url='https://t.me/cinemala_com1')
+        InlineKeyboardButton('🎬 𝙼𝙾𝚅𝙸𝙴 𝚄𝙿𝙳𝙰𝚃𝙴𝚂', url='https://t.me/MOVIESHUB_WA'),
+        InlineKeyboardButton('🤖 𝙱𝙾𝚃 𝚄𝙿𝙳𝙰𝚃𝙴𝚂', url='https://t.me/TG_BOTS_HUB')
      ],[
-        InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),
-        InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about_menu')
+        InlineKeyboardButton('ℹ️ 𝙷𝙴𝙻𝙿', callback_data='help'),
+        InlineKeyboardButton('😊 𝙰𝙱𝙾𝚄𝚃', callback_data='about')
      ],[
-        InlineKeyboardButton('ᴄʟᴏsᴇ', callback_data='close')    
+        InlineKeyboardButton('𝙲𝙻𝙾𝚂𝙴', callback_data='close')    
     ]]
     
         reply_markup = InlineKeyboardMarkup(buttons)
