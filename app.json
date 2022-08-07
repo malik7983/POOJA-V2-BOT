@@ -1,5 +1,5 @@
 {
-    "name": "Elsa-V3",
+    "name": "POOJA-V2-BOT",
     "description": "When you going to send file on telegram channel this bot will save that in database, So you can search that easily in inline mode",
     "stack": "container",
     "keywords": [
@@ -17,8 +17,8 @@
       "Redirect Bot",
       "Elsa bot"
     ],
-    "website": "https://github.com/Botowner/Elsa-V3",
-    "repository": "https://github.com/Botowner/Elsa-V3",
+    "website": "https://github.com/BC-Maniac/POOJA-V2-BOT",
+    "repository": "https://github.com/BC-Maniac/POOJA-V2-BOT",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.",
