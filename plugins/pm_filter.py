@@ -49,7 +49,7 @@ async def next_page(bot, query):
         offset = 0
     search = BUTTONS.get(key)
     if not search:
-        await query.answer("You are using one of my old messages, please send the request again.", show_alert=True)
+        await query.answer("<b>Yᴏᴜ ᴀʀᴇ ᴜsɪɴɢ ᴏɴᴇ ᴏғ ᴍʏ ᴏʟᴅ ᴍᴇssᴀɢᴇs, ᴘʟᴇᴀsᴇ sᴇɴᴅ ᴛʜᴇ ʀᴇǫᴜᴇsᴛ ᴀɢᴀɪɴ❗</b>", show_alert=True)
         return
 
     files, n_offset, total = await get_search_results(search, offset=offset, filter=True)
@@ -141,14 +141,14 @@ async def next_page(bot, query):
 async def advantage_spoll_choker(bot, query):
     _, user, movie_ = query.data.split('#')
     if int(user) != 0 and query.from_user.id != int(user):
-        return await query.answer("Bro/Sis This Not For You. U want is file- Please Request", show_alert=True)
+        return await query.answer("Eᴅᴀ ᴍᴡᴏɴᴇ, ᴀᴛʜ ʟᴏᴄᴋ ᴀᴀ 😁", show_alert=True)
     if movie_ == "close_spellcheck":
         return await query.message.delete()
     movies = SPELL_CHECK.get(query.message.reply_to_message.id)
     if not movies:
-        return await query.answer("Bro/Sis This Link Is Expired. Request Again Please.", show_alert=True)
+        return await query.answer("Eᴅᴀ ᴍᴡᴏɴᴇ, ᴀᴛʜ ʟᴏᴄᴋ ᴀᴀ 😁", show_alert=True)
     movie = movies[(int(movie_))]
-    await query.answer('𝖭𝗃𝖺𝗇 𝖬𝗈𝗏𝗂𝖾 𝗈𝗇𝗇 𝖳𝗁𝖺𝗉𝗉𝖺𝗍𝖾 𝖻𝗋𝗈...')
+    await query.answer('I ᴀᴍ sᴇᴀʀᴄʜɪɴɢ ᴛʜᴇ ᴍᴏᴠɪᴇ ғᴏʀ ʏᴏᴜ 😊')
     k = await manual_filters(bot, query.message, text=movie)
     if k == False:
         files, offset, total_results = await get_search_results(movie, offset=0, filter=True)
@@ -156,7 +156,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('This Movie Not Found In DataBase')
+            k = await query.message.edit('<b><i>Tʜɪs ᴍᴏᴠɪᴇ ɪs ɴᴏᴛ ғᴏᴜɴᴅ ɪɴ ᴏᴜʀ Dᴀᴛᴀʙᴀsᴇ ☹️</i></b>')
             await asyncio.sleep(10)
             await k.delete()
 
@@ -178,20 +178,20 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     title = chat.title
                 except:
                     await query.message.edit_text("Make sure I'm present in your group!!", quote=True)
-                    return await query.answer('Piracy Is Crime')
+                    return await query.answer('©️ 𝐌𝐎𝐕𝐈𝐄𝐒𝐇𝐔𝐁')
             else:
                 await query.message.edit_text(
                     "I'm not connected to any groups!\nCheck /connections or connect to any groups",
                     quote=True
                 )
-                return await query.answer('Piracy Is Crime')
+                return await query.answer('©️ 𝐌𝐎𝐕𝐈𝐄𝐒𝐇𝐔𝐁')
 
         elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
             grp_id = query.message.chat.id
             title = query.message.chat.title
 
         else:
-            return await query.answer('Are You Happy Now !')
+            return await query.answer('Eɴᴛʜᴀᴀᴅᴀ ɴɪ ʜᴇᴘᴘʏ ᴀᴀʏᴀ 😹')
 
         st = await client.get_chat_member(grp_id, userid)
         if (st.status == enums.ChatMemberStatus.OWNER) or (str(userid) in ADMINS):
@@ -216,7 +216,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 except:
                     pass
             else:
-                await query.answer("That's not for you!!", show_alert=True)
+                await query.answer("Eᴅᴀ ᴍᴡᴏɴᴇ, ᴀᴛʜ ʟᴏᴄᴋ ᴀᴀ 😁", show_alert=True)
     elif "groupcb" in query.data:
         await query.answer()
 
@@ -245,7 +245,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=keyboard,
             parse_mode=enums.ParseMode.MARKDOWN
         )
-        return await query.answer('Piracy Is Crime')
+        return await query.answer('©️ 𝐌𝐎𝐕𝐈𝐄𝐒𝐇𝐔𝐁')
     elif "connectcb" in query.data:
         await query.answer()
 
@@ -266,7 +266,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             )
         else:
             await query.message.edit_text('Some error occurred!!', parse_mode="md")
-        return await query.answer('Piracy Is Crime')
+        return await query.answer('©️ 𝐌𝐎𝐕𝐈𝐄𝐒𝐇𝐔𝐁')
     elif "disconnect" in query.data:
         await query.answer()
 
@@ -289,7 +289,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"Some error occurred!!",
                 parse_mode=enums.ParseMode.MARKDOWN
             )
-        return await query.answer('Piracy Is Crime')
+        return await query.answer('©️ 𝐌𝐎𝐕𝐈𝐄𝐒𝐇𝐔𝐁')
     elif "deletecb" in query.data:
         await query.answer()
 
@@ -307,7 +307,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"Some error occurred!!",
                 parse_mode=enums.ParseMode.MARKDOWN
             )
-        return await query.answer('Piracy Is Crime')
+        return await query.answer('©️ 𝐌𝐎𝐕𝐈𝐄𝐒𝐇𝐔𝐁')
     elif query.data == "backcb":
         await query.answer()
 
@@ -318,7 +318,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.message.edit_text(
                 "There are no active connections!! Connect to some groups first.",
             )
-            return await query.answer('Piracy Is Crime')
+            return await query.answer('©️ 𝐌𝐎𝐕𝐈𝐄𝐒𝐇𝐔𝐁')
         buttons = []
         for groupid in groupids:
             try:
@@ -358,7 +358,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         files_ = await get_file_details(file_id)
         if not files_:
-            return await query.answer('No such file exist.')
+            return await query.answer('Nᴏ sᴜᴄʜ ғɪʟᴇ ᴇxɪsᴛ 🥲')
         files = files_[0]
         title = files.file_name
         size = get_size(files.file_size)
@@ -392,7 +392,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 )
                 await query.answer('𝖨 𝗁𝖺𝗏𝖾 𝗌𝖾𝗇𝖽 𝗒𝗈𝗎 𝖿𝗂𝗅𝖾𝗌 𝖯𝖾𝗋𝗌𝗈𝗇𝖺𝗅𝗒 , 𝖢𝗁𝖾𝖼𝗄 𝗆𝗒 𝗉𝗆', show_alert=True)
         except UserIsBlocked:
-            await query.answer('Unblock the bot mahn !', show_alert=True)
+            await query.answer('Eᴅᴀ ᴍᴡᴏɴᴇ ᴇᴇ ʙᴏᴛ ʙʟᴏᴄᴋ ᴀᴀᴅᴀ, ɴɪ ᴜɴʙʟᴏᴄᴋ ᴄʜᴇʏʏ 🥱', show_alert=True)
         except PeerIdInvalid:
             await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
         except Exception as e:
@@ -406,7 +406,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         files_ = await get_file_details(file_id)
         if not files_:
-            return await query.answer('No such file exist.')
+            return await query.answer('Nᴏ sᴜᴄʜ ғɪʟᴇ ᴇxɪsᴛ 🥲')
         files = files_[0]
         title = files.file_name
         size = get_size(files.file_size)
@@ -503,15 +503,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
     elif query.data == "start":
         buttons = [[
-        InlineKeyboardButton('× ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ×', url=f'http://t.me/{temp.U_NAME}?startgroup=true') ] ,
+        InlineKeyboardButton('❄️ 𝙹𝙾𝙸𝙽 𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ❄️', url=f'https://t.me/+MNczoLfGDYM1ZmEx') ] ,
        [
-        InlineKeyboardButton(' ɢʀᴏᴜᴩ ', url='https://t.me/cinemala_com'),
-        InlineKeyboardButton(' ᴄʜᴀɴɴᴇʟ ', url='https://t.me/cinemala_com1')
+        InlineKeyboardButton('🎬 𝙼𝙾𝚅𝙸𝙴 𝚄𝙿𝙳𝙰𝚃𝙴𝚂', url='https://t.me/MOVIESHUB_WA'),
+        InlineKeyboardButton('🤖 𝙱𝙾𝚃 𝚄𝙿𝙳𝙰𝚃𝙴𝚂', url='https://t.me/TG_BOTS_HUB')
      ],[
-        InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),
-        InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about_menu')
+        InlineKeyboardButton('ℹ️ 𝙷𝙴𝙻𝙿', callback_data='help'),
+        InlineKeyboardButton('😊 𝙰𝙱𝙾𝚄𝚃', callback_data='about')
      ],[
-        InlineKeyboardButton('ᴄʟᴏsᴇ', callback_data='close')    
+        InlineKeyboardButton('𝙲𝙻𝙾𝚂𝙴', callback_data='close')    
     ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.delete()
@@ -534,7 +534,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 ),
                 reply_markup=reply_markup,
             )
-        await query.answer('Privacy Is Crime')
+        await query.answer('©️ 𝐌𝐎𝐕𝐈𝐄𝐒𝐇𝐔𝐁')
     elif query.data == "help":
         buttons = [[
             InlineKeyboardButton('𝙵𝙸𝙻𝚃𝙴𝚁', callback_data='hud'),
@@ -577,8 +577,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about_menu":
         buttons = [[
-        InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url='https://t.me/cinemala_com1'),
-        InlineKeyboardButton('sᴜᴘᴘᴏʀᴛ', url='https://t.me/cinemala_com1'),
+        InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url='https://t.me/MOVIESHUB_WA'),
+        InlineKeyboardButton('sᴜᴘᴘᴏʀᴛ', url='https://t.me/TG_BOTS_HUB'),
         InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='start')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -591,7 +591,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "source":
         buttons = [[
-            InlineKeyboardButton('𝚁𝙴𝙿𝙾', url='https://t.me/cinemala_com1'),
+            InlineKeyboardButton('𝚁𝙴𝙿𝙾', url='https://t.me/MOVIESHUB_WA'),
             InlineKeyboardButton('𝙱𝙰𝙲𝙺', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -907,16 +907,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "close":
         await query.message.delete()
     elif query.data == "reqinfo":
-        await query.answer("⚠ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ⚠\n\nᴀꜰᴛᴇʀ 10 ᴍɪɴᴜᴛᴇꜱ ᴛʜɪꜱ ᴍᴇꜱꜱᴀɢᴇ ᴡɪʟʟ ʙᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴅᴇʟᴇᴛᴇᴅ\n\nɪꜰ ʏᴏᴜ ᴅᴏ ɴᴏᴛ ꜱᴇᴇ ᴛʜᴇ ʀᴇǫᴜᴇsᴛᴇᴅ ᴍᴏᴠɪᴇ / sᴇʀɪᴇs ꜰɪʟᴇ, ʟᴏᴏᴋ ᴀᴛ ᴛʜᴇ ɴᴇxᴛ ᴘᴀɢᴇ\n\n❣ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄɪɴᴇᴍᴀʟᴀ.ᴄᴏᴍ", show_alert=True)
+        await query.answer("⚠ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ⚠\n\nIꜰ ʏᴏᴜ ᴅᴏ ɴᴏᴛ ꜱᴇᴇ ᴛʜᴇ ʀᴇǫᴜᴇsᴛᴇᴅ ᴍᴏᴠɪᴇ ꜰɪʟᴇ, ʟᴏᴏᴋ ᴀᴛ ᴛʜᴇ Nᴇxᴛ Pᴀɢᴇ\n\n❣ Pᴏᴡᴇʀᴇᴅ ʙʏ 𝐌𝐎𝐕𝐈𝐄𝐒𝐇𝐔𝐁", show_alert=True)
 
     elif query.data == "minfo":
-        await query.answer("⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯\nᴍᴏᴠɪᴇ ʀᴇǫᴜᴇꜱᴛ ꜰᴏʀᴍᴀᴛ\n⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯\n\nɢᴏ ᴛᴏ ɢᴏᴏɢʟᴇ ➠ ᴛʏᴘᴇ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ ➠ ᴄᴏᴘʏ ᴄᴏʀʀᴇᴄᴛ ɴᴀᴍᴇ ➠ ᴘᴀꜱᴛᴇ ᴛʜɪꜱ ɢʀᴏᴜᴘ\n\nᴇxᴀᴍᴘʟᴇ : ᴀᴠᴀᴛᴀʀ: ᴛʜᴇ ᴡᴀʏ ᴏғ ᴡᴀᴛᴇʀ\n\n🚯 ᴅᴏɴᴛ ᴜꜱᴇ ➠ ':(!,./)\n\n©️ ᴄɪɴᴇᴍᴀʟᴀ.ᴄᴏᴍ", show_alert=True)
+        await query.answer("⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯\nᴍᴏᴠɪᴇ ʀᴇǫᴜᴇꜱᴛ ꜰᴏʀᴍᴀᴛ\n⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯\n\nɢᴏ ᴛᴏ ɢᴏᴏɢʟᴇ ➠ ᴛʏᴘᴇ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ ➠ ᴄᴏᴘʏ ᴄᴏʀʀᴇᴄᴛ ɴᴀᴍᴇ ➠ ᴘᴀꜱᴛᴇ ᴛʜɪꜱ ɢʀᴏᴜᴘ\n\nᴇxᴀᴍᴘʟᴇ : ᴠɪᴋʀᴀᴍ\n\n🚯 ᴅᴏɴᴛ ᴜꜱᴇ ➠ ':(!,./)\n\n©️ 𝐌𝐎𝐕𝐈𝐄𝐒𝐇𝐔𝐁", show_alert=True)
 
     elif query.data == "sinfo":
-        await query.answer("⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯\nꜱᴇʀɪᴇꜱ ʀᴇǫᴜᴇꜱᴛ ꜰᴏʀᴍᴀᴛ\n⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯\n\nɢᴏ ᴛᴏ ɢᴏᴏɢʟᴇ ➠ ᴛʏᴘᴇ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ ➠ ᴄᴏᴘʏ ᴄᴏʀʀᴇᴄᴛ ɴᴀᴍᴇ ➠ ᴘᴀꜱᴛᴇ ᴛʜɪꜱ ɢʀᴏᴜᴘ\n\nᴇxᴀᴍᴘʟᴇ : ᴍᴏɴᴇʏ ʜᴇɪsᴛ S01E01\n\n🚯 ᴅᴏɴᴛ ᴜꜱᴇ ➠ ':(!,./)\n\n©️ ᴄɪɴᴇᴍᴀʟᴀ.ᴄᴏᴍ", show_alert=True)      
+        await query.answer("⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯\nꜱᴇʀɪᴇꜱ ʀᴇǫᴜᴇꜱᴛ ꜰᴏʀᴍᴀᴛ\n⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯\n\nɢᴏ ᴛᴏ ɢᴏᴏɢʟᴇ ➠ ᴛʏᴘᴇ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ ➠ ᴄᴏᴘʏ ᴄᴏʀʀᴇᴄᴛ ɴᴀᴍᴇ ➠ ᴘᴀꜱᴛᴇ ᴛʜɪꜱ ɢʀᴏᴜᴘ\n\nᴇxᴀᴍᴘʟᴇ : ᴍᴏɴᴇʏ ʜᴇɪsᴛ\n\n🚯 ᴅᴏɴᴛ ᴜꜱᴇ ➠ ':(!,./)\n\n©️ 𝐌𝐎𝐕𝐈𝐄𝐒𝐇𝐔𝐁", show_alert=True)      
 
     elif query.data == "tinfo":
-        await query.answer("▣ ᴛɪᴘs ▣\n\n★ ᴛʏᴘᴇ ᴄᴏʀʀᴇᴄᴛ sᴘᴇʟʟɪɴɢ (ɢᴏᴏɢʟᴇ)\n\n★ ɪғ ʏᴏᴜ ɴᴏᴛ ɢᴇᴛ ʏᴏᴜʀ ғɪʟᴇ ɪɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ᴛʜᴇɴ ᴛʜᴇ ɴᴇxᴛ sᴛᴇᴘ ɪs ᴄʟɪᴄᴋ ɴᴇxᴛ ʙᴜᴛᴛᴏɴ.\n\n★ ᴄᴏɴᴛɪɴᴜᴇ ᴛʜɪs ᴍᴇᴛʜᴏᴅ ᴛᴏ ɢᴇᴛᴛɪɴɢ ʏᴏᴜ ғɪʟᴇ\n\n❣ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄɪɴᴇᴍᴀʟᴀ. ᴄᴏᴍ", show_alert=True)
+        await query.answer("▣ ᴛɪᴘs ▣\n\n★ ᴛʏᴘᴇ ᴄᴏʀʀᴇᴄᴛ sᴘᴇʟʟɪɴɢ (ɢᴏᴏɢʟᴇ)\n\n★ ɪғ ʏᴏᴜ ɴᴏᴛ ɢᴇᴛ ʏᴏᴜʀ ғɪʟᴇ ɪɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ᴛʜᴇɴ ᴛʜᴇ ɴᴇxᴛ sᴛᴇᴘ ɪs ᴄʟɪᴄᴋ ɴᴇxᴛ ʙᴜᴛᴛᴏɴ.\n\n★ ᴄᴏɴᴛɪɴᴜᴇ ᴛʜɪs ᴍᴇᴛʜᴏᴅ ᴛᴏ ɢᴇᴛᴛɪɴɢ ʏᴏᴜ ғɪʟᴇ\n\n❣ ᴘᴏᴡᴇʀᴇᴅ ʙʏ 𝐌𝐎𝐕𝐈𝐄𝐒𝐇𝐔𝐁", show_alert=True)
     
     try: await query.answer('Information Showing...') 
     except: pass
@@ -974,7 +974,7 @@ async def auto_filter(client, msg: pyrogram.types.Message, spoll=False):
 
     btn.insert(0, 
         [
-            InlineKeyboardButton(f'♀️ {search} ♀️ ', 'dupe')
+            InlineKeyboardButton(f'🎞️ {title} 🎞️', 'dupe')
         ]
     )
     btn.insert(1,
@@ -1035,7 +1035,7 @@ async def auto_filter(client, msg: pyrogram.types.Message, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b><i>🎪 ᴛɪᴛʟᴇ : {search}\n 👤 ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ : {message.from_user.mention}\n👥ɢʀᴏᴜᴘ : {message.chat.title}</i></b> "
+        cap = f"<b>🎪 Tɪᴛʟᴇ : {search}\n\n<i>  👤 Rᴇǫᴜᴇsᴛᴇᴅ ʙʏ : {message.from_user.mention}\n  ⚡ Pᴏᴡᴇʀᴇᴅ Bʏ: [𝐌𝐎𝐕𝐈𝐄𝐒𝐇𝐔𝐁](https://t.me/+MNczoLfGDYM1ZmEx)</i></b> "
     if imdb and imdb.get('poster'):
         try:
             fmsg = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
