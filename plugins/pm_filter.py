@@ -148,7 +148,7 @@ async def advantage_spoll_choker(bot, query):
     if not movies:
         return await query.answer("Eᴅᴀ ᴍᴡᴏɴᴇ, ᴀᴛʜ ʟᴏᴄᴋ ᴀᴀ 😁", show_alert=True)
     movie = movies[(int(movie_))]
-    await query.answer('I ᴀᴍ sᴇᴀʀᴄʜɪɴɢ ᴛʜᴇ ᴍᴏᴠɪᴇ ғᴏʀ ʏᴏᴜ 😊')
+    await query.answer('<b><i>I ᴀᴍ sᴇᴀʀᴄʜɪɴɢ ᴛʜᴇ Mᴏᴠɪᴇ ғᴏʀ ʏᴏᴜ 😊</i></b>')
     k = await manual_filters(bot, query.message, text=movie)
     if k == False:
         files, offset, total_results = await get_search_results(movie, offset=0, filter=True)
@@ -156,7 +156,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('<b><i>Tʜɪs ᴍᴏᴠɪᴇ ɪs ɴᴏᴛ ғᴏᴜɴᴅ ɪɴ ᴏᴜʀ Dᴀᴛᴀʙᴀsᴇ ☹️</i></b>')
+            k = await query.message.edit('<b><i>Tʜɪs ᴍᴏᴠɪᴇ ɪs ɴᴏᴛ ʏᴇᴛ ʀᴇʟᴇᴀsᴇᴅ ᴏʀ ᴀᴅᴅᴇᴅ ᴛᴏ ᴛʜᴇ Dᴀᴛᴀʙᴀsᴇ 💌</i></b>')
             await asyncio.sleep(10)
             await k.delete()
 
@@ -1095,7 +1095,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("𝖡𝗋𝗈, 𝖢𝗁𝖾𝖼𝗄 𝗍𝗁𝖾 𝗌𝗉𝖾𝗅𝗅𝗂𝗇𝗀 𝖸𝗈𝗎 𝗁𝖺𝗏𝖾 𝗌𝖾𝗇𝖽 𝗂𝗇 𝗀𝗈𝗈𝗀𝗅𝖾. 𝖨𝖿 𝖸𝗈𝗎 𝗁𝖺𝗏𝖾 𝗋𝖾𝗊𝗎𝖾𝗌𝗍𝖾𝖽 𝖥𝗈𝗋 𝖢𝖺𝗆 𝗉𝗋𝗂𝗇𝗍 𝖸𝗈𝗎 𝗐𝗂𝗅𝗅 𝗇𝗈𝗍 𝖦𝖾𝗍 𝗂𝗍.")
+        k = await msg.reply("<b><i>Bʀᴏ, Cʜᴇᴄᴋ ᴛʜᴇ sᴘᴇʟʟɪɴɢ ᴏғ ʏᴏᴜʀ Rᴇǫᴜᴇsᴛᴇᴅ Mᴏᴠɪᴇ Gᴏᴏɢʟᴇ. Iғ ʏᴏᴜ ᴀʀᴇ ʀᴇǫᴜᴇsᴛɪɴɢ ғᴏʀ Tʜᴇᴀᴛʀᴇ Pʀɪɴᴛ Fɪʟᴇ ʏᴏᴜ ᴡᴏɴ'ᴛ ɢᴇᴛ ɪᴛ 😁.</i></b>")
         await asyncio.sleep(8)
         await k.delete()
         return
@@ -1106,7 +1106,7 @@ async def advantage_spell_chok(msg):
         InlineKeyboardButton("🔍ɢᴏᴏɢʟᴇ🔎", url=f'https://google.com/search?q={check}')
     ]]
     await msg.reply_text(
-        text="𝖡𝗋𝗈, 𝖢𝗁𝖾𝖼𝗄 𝗍𝗁𝖾 𝗌𝗉𝖾𝗅𝗅𝗂𝗇𝗀 𝖸𝗈𝗎 𝗁𝖺𝗏𝖾 𝗌𝖾𝗇𝖽 𝗂𝗇 𝗀𝗈𝗈𝗀𝗅𝖾. 𝖨𝖿 𝖸𝗈𝗎 𝗁𝖺𝗏𝖾 𝗋𝖾𝗊𝗎𝖾𝗌𝗍𝖾𝖽 𝖥𝗈𝗋 𝖢𝖺𝗆 𝗉𝗋𝗂𝗇𝗍 𝖸𝗈𝗎 𝗐𝗂𝗅𝗅 𝗇𝗈𝗍 𝖦𝖾𝗍 𝗂𝗍.", 
+        text="<b><i>Bʀᴏ, Cʜᴇᴄᴋ ᴛʜᴇ sᴘᴇʟʟɪɴɢ ᴏғ ʏᴏᴜʀ Rᴇǫᴜᴇsᴛᴇᴅ Mᴏᴠɪᴇ Gᴏᴏɢʟᴇ. Iғ ʏᴏᴜ ᴀʀᴇ ʀᴇǫᴜᴇsᴛɪɴɢ ғᴏʀ Tʜᴇᴀᴛʀᴇ Pʀɪɴᴛ Fɪʟᴇ ʏᴏᴜ ᴡᴏɴ'ᴛ ɢᴇᴛ ɪᴛ 😁.</i></b>", 
         reply_markup=InlineKeyboardMarkup(BTN)
     )
 async def manual_filters(client, message, text=False):
