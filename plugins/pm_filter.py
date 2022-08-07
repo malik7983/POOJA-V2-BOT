@@ -1116,7 +1116,7 @@ async def advantage_spell_chok(msg):
                 )
             ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="✘ Close ✘", callback_data=f'spolling#{user}#close_spellcheck')])
-    notemp = await msg.reply("**I couldn't find anything related to that\n\nDid you mean any one of these?**", reply_markup=InlineKeyboardMarkup(btn))
+    notemp = await msg.reply("**I ᴄᴏᴜʟᴅɴ'ᴛ ғɪɴᴅ ᴀɴʏᴛʜɪɴɢ ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ʏᴏᴜʀ ʀᴇǫᴜᴇsᴛ❗\n Dɪᴅ ʏᴏᴜ ᴍᴇᴀɴ ᴀɴʏ ᴏɴᴇ ᴏғ ᴛʜᴇsᴇ❔\n\nനിങ്ങൾ ചെയ്ത Rᴇǫᴜᴇsᴛ മൂവീ എനിക്ക് കണ്ടെത്താനായില്ല. താഴെ കാണുന്നവയിൽ നിങ്ങൾ ഉദേശിക്കുന്ന മൂവീ ഉണ്ടോന്ന് നോക്ക്❗**", reply_markup=InlineKeyboardMarkup(btn))
 
 async def manual_filters(client, message, text=False):
     group_id = message.chat.id
