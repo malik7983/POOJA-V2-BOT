@@ -66,7 +66,7 @@ PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
 
 DELETE_TIME = int(environ.get('DELETE_TIME', 300))
-START_IMAGE_URL = environ.get('START_IMAGE_URL', "")
+START_IMAGE_URL = "https://telegra.ph/file/f38d066698722d3367b36.jpg" #environ.get('START_IMAGE_URL', "")
 UNAUTHORIZED_CALLBACK_TEXT = (environ.get('UNAUTHORIZED_CALLBACK_TEXT', "𝑯𝒆𝒚 𝒃𝒓𝒐 𝒕𝒉𝒊𝒔 𝒊𝒔 𝒏𝒐𝒕 𝒇𝒂𝒊𝒓"))[:200]
 REDIRECT_TO = (environ.get('REDIRECT_TO', 0))
 
