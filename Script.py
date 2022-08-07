@@ -1,8 +1,12 @@
 class script(object):
-    START_TXT = """<b>𝙷𝙴𝙻𝙾 {},
-𝙼𝚈 𝙽𝙰𝙼𝙴 𝙸𝚂 <a href=https://t.me/{}>{}</a>, 𝙸 𝙲𝙰𝙽 𝙿𝚁𝙾𝚅𝙸𝙳𝙴 𝙼𝙾𝚅𝙸𝙴𝚂, 𝙹𝚄𝚂𝚃 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 𝙰𝙽𝙳 𝙼𝙰𝙺𝙴 𝙼𝙴 𝙰𝙳𝙼𝙸𝙽.</b>
+    START_TXT = """Hᴇʏ {}👋
+
+I ᴀᴍ "𝑷𝒐𝒐𝒋𝒂 🦋" ʏᴏᴜ ᴄᴀɴ ᴄᴀʟʟ ᴍᴇ ᴀs Aᴜᴛᴏғɪʟᴛᴇʀʙᴏᴛ V𝟹
+
+Exᴄʟᴜsɪᴠᴇʟʏ ᴍᴀᴅᴇ ғᴏʀ ᴛʜᴇ ᴛᴇᴀᴍ <a href='https://t.me/+MNczoLfGDYM1ZmEx'>𝐌𝐎𝐕𝐈𝐄𝐒𝐇𝐔𝐁</a>....❕
 """
-    HELP_TXT = """<b>𝖧𝖾𝗋𝖾 𝗂𝗌 𝗍𝗁𝖾 𝖴𝗌𝗎𝖺𝗅 𝖼𝗈𝗆𝗆𝖺𝗇𝖽𝗌:</b>
+    HELP_TXT = """<b>𝙷𝙴𝚈 {}👋
+          𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙷𝙴𝙻𝙿 𝙵𝙾𝚁 𝙼𝚈 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂.</b>
 """
   
     PASTE_TXT = """<b>𝖯𝖺𝗌𝗍𝖾</b>
@@ -14,7 +18,7 @@ class script(object):
    
     ABOUT_TXT = """
 ○ My Name : Elsa
-○ 𝖢𝗋𝖾𝖺𝗍𝗈𝗋 : <a href='https://t.me/Aswin_pm_Bot'>𝖳𝗁𝗂𝗌 𝖯𝖾𝗋𝗌𝗈𝗇</a>
+○ 𝖢𝗋𝖾𝖺𝗍𝗈𝗋 : <a href='https://t.me/XYZ55555'>ᴍᴇ</a>
 ○ 𝖫𝖺𝗇𝗀𝗎𝖺𝗀𝖾 : 𝖯𝗒𝗍𝗁𝗈𝗇 𝟥 
 ○ 𝖫𝗂𝖻𝗋𝖺𝗋𝗒 : 𝖯𝗒𝗋𝗈𝗀𝗋𝖺𝗆 𝖺𝗌𝗒𝗇𝖼𝗂𝗈 𝟢.𝟣𝟩.𝟣 
 ○ 𝖲𝖾𝗋𝗏𝖾𝗋 : Heroku
@@ -22,11 +26,11 @@ class script(object):
 ○ 𝖡𝗎𝗂𝗅𝖽 𝖲𝗍𝖺𝗍𝗎𝗌 : 𝖵10 [BeTa]
 """
     SOURCE_TXT = """<b>NOTE:</b>
-- Elsa 𝖨𝗌 𝖺 Not an 𝖮𝗉𝖾𝗇 𝖲𝗈𝗎𝗋𝖼𝖾 𝖯𝗋𝗈𝗃𝖾𝖼𝗍
+- Pooja 𝖨𝗌 𝖺 Not an 𝖮𝗉𝖾𝗇 𝖲𝗈𝗎𝗋𝖼𝖾 𝖯𝗋𝗈𝗃𝖾𝖼𝗍
 
 Devs:
 
-» <a href='https://t.me/Aswin_pm_Bot'>Owner</a>
+» <a href='https://t.me/XYZ55555'>ᴍᴇ</a>
 """ 
     TTS_TXT = """<b>TEXT TO SPEACH</b>
 Simple Telegram Text-To-Speech Module.
@@ -224,5 +228,5 @@ Elsa
     LOG_TEXT_P = """#NewUser
 ID - <code>{}</code>
 Name - {}
-Elsa
+Pooja
 """
