@@ -156,7 +156,7 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit('<b><i>Tʜɪs ᴍᴏᴠɪᴇ ɪs ɴᴏᴛ ʏᴇᴛ ʀᴇʟᴇᴀsᴇᴅ ᴏʀ ᴀᴅᴅᴇᴅ ᴛᴏ ᴛʜᴇ Dᴀᴛᴀʙᴀsᴇ 💌.</i>\n\n 𝙼𝙴𝙽𝚃𝙸𝙾𝙽 @admin 𝚃𝙾 𝙽𝙾𝚃𝙸𝙵𝚈 𝙰𝙳𝙼𝙸𝙽𝚂 𝙰𝙱𝙾𝚄𝚃 𝚃𝙷𝙴 𝙼𝙸𝚂𝚂𝙸𝙽𝙶 𝙼𝙾𝚅𝙸𝙴</b>')
+            k = await query.message.edit('<b><i>Tʜɪs ᴍᴏᴠɪᴇ ɪs ɴᴏᴛ ʏᴇᴛ ʀᴇʟᴇᴀsᴇᴅ ᴏʀ ᴀᴅᴅᴇᴅ ᴛᴏ ᴛʜᴇ Dᴀᴛᴀʙᴀsᴇ 💌.</i></b><\n\n𝙼𝙴𝙽𝚃𝙸𝙾𝙽 @admin 𝚃𝙾 𝙽𝙾𝚃𝙸𝙵𝚈 𝙰𝙳𝙼𝙸𝙽𝚂 𝙰𝙱𝙾𝚄𝚃 𝚃𝙷𝙴 𝙼𝙸𝚂𝚂𝙸𝙽𝙶 𝙼𝙾𝚅𝙸𝙴')
             await asyncio.sleep(10)
             await k.delete()
 
@@ -851,7 +851,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         if str(grp_id) != str(grpid):
             await query.message.edit("Your Active Connection Has Been Changed. Go To /settings.")
-            return await query.answer('Piracy Is Crime')
+            return await query.answer('©️ 𝐌𝐎𝐕𝐈𝐄𝐒𝐇𝐔𝐁')
 
         if status == "True" or status == "Chat":
             await save_group_settings(grpid, set_type, False)
