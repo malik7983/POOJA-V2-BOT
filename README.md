@@ -52,7 +52,7 @@ You can deploy this bot anywhere.
 <summary>Deploy To Heroku</summary>
 <br>
 <p>
-<a href="https://heroku.com/deploy?template=https://github.com/BC-Maniac/POOJA-V2-BOT">
+<a href="https://heroku.com/deploy?template=https://github.com/malik7983/POOJA-V2-BOT">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 </a>
 </p>
