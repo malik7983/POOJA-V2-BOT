@@ -1,7 +1,7 @@
 if [ -z $UPSTREAM_REPO ]
 then
   echo "Cloning main Repository"
-  git clone https://github.com/BC-Maniac/POOJA-V2-BOT.git /POOJA-V2-BOT
+  git clone https://github.com/malik7983/POOJA-V2-BOT.git /POOJA-V2-BOT
 else
   echo "Cloning Custom Repo from $UPSTREAM_REPO "
   git clone $UPSTREAM_REPO /POOJA-V2-BOT
